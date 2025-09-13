@@ -16,6 +16,9 @@ local shortcuts = {
     {mods = {"command", "alt"}, key = "k", app = "Cursor"},
     {mods = {"command", "alt"}, key = "l", app = "Google Chrome"},
     {mods = {"command", "alt"}, key = ";", app = "Finder"},
+
+    {mods = {"command", "alt"}, key = "m", app = "ChatGpt"},
+    {mods = {"command", "alt"}, key = ",", app = "Spotify"},
 }
 
 -- Function to focus an application and cycle through its windows
