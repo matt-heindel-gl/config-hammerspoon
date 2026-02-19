@@ -17,7 +17,7 @@ local shortcuts = {
     {mods = {"command", "alt"}, key = "l", app = "Google Chrome"},
     {mods = {"command", "alt"}, key = ";", app = "Finder"},
 
-    {mods = {"command", "alt"}, key = "m", app = "ChatGpt"},
+    {mods = {"command", "alt"}, key = "m", app = "Claude"},
     {mods = {"command", "alt"}, key = ",", app = "Spotify"},
 }
 
