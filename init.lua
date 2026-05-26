@@ -25,10 +25,8 @@ local shortcuts = {
 local function focusApp(appName)
     local app = hs.application.find(appName)
 
-    -- If app isn't running, launch it
     if not app then
-        log.d("App not running, launching:", appName)
-        hs.application.launchOrFocus(appName)
+        log.d("App not running, skipping:", appName)
         return
     end
 
@@ -71,7 +69,7 @@ local function focusApp(appName)
     else
         -- Focus the app if it's not currently focused
         log.d("App not focused, focusing:", appName)
-        hs.application.launchOrFocus(appName)
+        app:activate()
     end
 end
 
