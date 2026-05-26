@@ -13,7 +13,8 @@ local shortcuts = {
     {mods = {"command", "alt"}, key = "p", app = "Postman"},
 
     {mods = {"command", "alt"}, key = "j", app = "iTerm"},
-    {mods = {"command", "alt"}, key = "k", app = "Visual Studio Code"},
+    -- cycle windows instead
+    -- {mods = {"command", "alt"}, key = "k", app = "Visual Studio Code"},
     {mods = {"command", "alt"}, key = "l", app = "Google Chrome"},
     {mods = {"command", "alt"}, key = ";", app = "Finder"},
 
@@ -79,6 +80,11 @@ for _, shortcut in ipairs(shortcuts) do
         focusApp(shortcut.app)
     end)
 end
+
+-- Remap cmd+alt+k to cmd+` (cycle windows of current app)
+hs.hotkey.bind({"command", "alt"}, "k", function()
+    hs.eventtap.keyStroke({"command"}, "`")
+end)
 
 -- Slack-specific key remapping
 local function remapSlackKeys(event)
