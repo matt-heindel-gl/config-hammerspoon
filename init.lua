@@ -13,7 +13,7 @@ local shortcuts = {
     {mods = {"command", "alt"}, key = "p", app = "Postman"},
 
     {mods = {"command", "alt"}, key = "j", app = "iTerm"},
-    {mods = {"command", "alt"}, key = "k", app = "Cursor"},
+    {mods = {"command", "alt"}, key = "k", app = "Visual Studio Code"},
     {mods = {"command", "alt"}, key = "l", app = "Google Chrome"},
     {mods = {"command", "alt"}, key = ";", app = "Finder"},
 
