@@ -7,17 +7,21 @@ local log = hs.logger.new('myconfig', 'debug')
 -- Define the keyboard shortcuts and their corresponding applications
 local shortcuts = {
     -- Command + Option = hold down V on moonlander
+
+    -- top row
     {mods = {"command", "alt"}, key = "u", app = "Slack"},
-    {mods = {"command", "alt"}, key = "i", app = "zoom.us"},
+    {mods = {"command", "alt"}, key = "i", app = "Zoom"},
     {mods = {"command", "alt"}, key = "o", app = "Microsoft Outlook"},
     {mods = {"command", "alt"}, key = "p", app = "Postman"},
 
+    -- home row
+    -- h = cycle back
     {mods = {"command", "alt"}, key = "j", app = "iTerm"},
-    -- cycle windows instead
-    -- {mods = {"command", "alt"}, key = "k", app = "Visual Studio Code"},
-    {mods = {"command", "alt"}, key = "l", app = "Google Chrome"},
+    {mods = {"command", "alt"}, key = "k", app = "Google Chrome"},
+    -- l = cycle forward
     {mods = {"command", "alt"}, key = ";", app = "Finder"},
 
+    -- bottom row
     {mods = {"command", "alt"}, key = "m", app = "Claude"},
     {mods = {"command", "alt"}, key = ",", app = "Spotify"},
 }
@@ -81,8 +85,11 @@ for _, shortcut in ipairs(shortcuts) do
     end)
 end
 
--- Remap cmd+alt+k to cmd+` (cycle windows of current app)
-hs.hotkey.bind({"command", "alt"}, "k", function()
+-- Cycle through apps
+hs.hotkey.bind({"command", "alt"}, "h", function()
+    hs.eventtap.keyStroke({"command", "shift"}, "`")
+end)
+hs.hotkey.bind({"command", "alt"}, "l", function()
     hs.eventtap.keyStroke({"command"}, "`")
 end)
 
