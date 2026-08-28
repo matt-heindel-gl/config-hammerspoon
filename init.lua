@@ -16,7 +16,7 @@ local shortcuts = {
 
     -- home row
     -- h = cycle back
-    {mods = {"command", "alt"}, key = "j", app = "iTerm"},
+    {mods = {"command", "alt"}, key = "j", app = "Ghostty"},
     {mods = {"command", "alt"}, key = "k", app = "Google Chrome"},
     -- l = cycle forward
     {mods = {"command", "alt"}, key = ";", app = "Finder"},
